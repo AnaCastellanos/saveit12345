@@ -299,7 +299,7 @@ function receivedMessage(event) {
         sendReceiptMessage(senderID);
         break;
 
-      case 'quick reply':
+      case 'ahorrar':
         sendQuickReply(senderID);
         break;        
 
@@ -597,6 +597,9 @@ function sendButtonMessage(recipientId) {
   callSendAPI(messageData);
 }
 
+
+
+
 /*
  * Send a Structured Message (Generic Message type) using the Send API.
  *
@@ -727,23 +730,18 @@ function sendQuickReply(recipientId) {
       id: recipientId
     },
     message: {
-      text: "What's your favorite movie genre?",
+      text: "¿Quieres abonar dinero a tu cuenta de ahorros?",
       quick_replies: [
         {
           "content_type":"text",
-          "title":"Action",
+          "title":"Si",
           "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_ACTION"
         },
         {
           "content_type":"text",
-          "title":"Comedy",
+          "title":"No",
           "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_COMEDY"
         },
-        {
-          "content_type":"text",
-          "title":"Drama",
-          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_DRAMA"
-        }
       ]
     }
   };
