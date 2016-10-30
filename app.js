@@ -245,6 +245,7 @@ function receivedMessage(event) {
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
+    console.log(quickReply.payload)
     sendTextMessage(senderID, "Quick reply tapped");
     return;
   }
@@ -255,7 +256,7 @@ function receivedMessage(event) {
       messageText = 'hola';
     }
 
-    if (messageText == 'ahorrar' || messageText == 'ahorro' || messageText == 'necesito ahorrar' || messageText == 'quiero ahorrar'){
+    if (messageText == 'ahorrar' || messageText == 'ahorro' || messageText == 'necesito ahorrar' || messageText == 'quiero ahorrar' || messageText == 'abonar'){
       messageText = 'ahorrar'
     }
 
