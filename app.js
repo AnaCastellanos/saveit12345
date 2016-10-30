@@ -251,7 +251,7 @@ function receivedMessage(event) {
 
   if (messageText) {
 
-    if (messageText == 'hola' || 'hello' || 'hi' || 'que onda' || '¿que onda?'){
+    if (messageText == 'hola' || messageText == 'hello' || messageText == 'hi' || messageText =='que onda' || messageText =='¿que onda?'){
       console.log(true);
     }
 
