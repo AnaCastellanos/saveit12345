@@ -254,7 +254,6 @@ function receivedMessage(event) {
 
     if (messageText == 'hola' || messageText == 'hello' || messageText == 'hi' || messageText =='que onda' || messageText =='¿que onda?'){
       messageText = 'hola';
-      callUserData(userData)
     }
 
     if (messageText == 'ahorrar' || messageText == 'ahorro' || messageText == 'necesito ahorrar' || messageText == 'quiero ahorrar' || messageText == 'abonar'){
@@ -920,37 +919,6 @@ function callSendAPI(messageData) {
     }
   });  
 }
-
-function callUserData(userData){
-  request({
-    uri: 'https://graph.facebook.com/v2.6/me/thread_settings',
-    qs: { access_token: PAGE_ACCESS_TOKEN },
-    method: 'POST',
-    json: messageData
-
-  }, function (error, response, body) {
-    if (!error && response.statusCode == 200) {      
-      FNU = body;
-      console.log(FNU);
-      console.log("HOLA");
-      console.log("");      
-
-      if (messageId) {
-        console.log("Successfully sent message with id %s to recipient %s", 
-          messageId, recipientId);
-      } else {
-      console.log("Successfully called Send API for recipient %s", 
-        recipientId);
-      }
-    } else {
-      console.error("Failed calling Send API", response.statusCode, response.statusMessage, body.error);
-    }
-  }); 
-
-}
-
-
-
 
 // Start server
 // Webhooks must be available via SSL with a certificate signed by a valid 
