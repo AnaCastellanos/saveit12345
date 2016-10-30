@@ -256,7 +256,7 @@ function receivedMessage(event) {
     // the text we received.
     switch (messageText.toLowerCase()) {
       case 'ayuda':
-        sendAyudaMessage(senderID,messageText);
+        sendAyudaMessage(senderID, "Hola como estas?");
         break;
 
       case 'image':
