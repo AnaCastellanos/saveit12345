@@ -242,9 +242,9 @@ function receivedMessage(event) {
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload;
     if (quickReplyPayload == "Si"){
-      console.log("Hola SI SE PUDO");
+      messageText("GENIAL!! Te ire guiando en una serie de pasos para comenzar con tus ahorros.");      
     }else{
-      console.log("Hola NO SE PUDO");
+      
     }
     return;
   }
