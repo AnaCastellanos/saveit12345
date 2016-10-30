@@ -251,9 +251,9 @@ function receivedMessage(event) {
 
   if (messageText) {
 
-    // if (messageText == 'hola' || 'hello' || 'hi' || 'que onda' || '¿que onda?'){
-    //   messageText = 'hola';
-    // }
+    if (messageText == 'hola' || messageText =='hello' || messageText == 'hi' || messageText =='que onda' || messageText == '¿que onda?'){
+      console.log(true);
+    }
 
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
