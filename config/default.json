@@ -2,5 +2,5 @@
     "appSecret": "c383546d9687966776a7d552adc9b306",
     "pageAccessToken": "EAACwNf0AJOkBAGoZCF9yzQaOkCxIg3TfseMWYWhrHgJKlraZBYTj4Wl3wIeglkW0i24hbdL7mHogpScUQuTLK08nxr7DqHs6asqiQdE9JBxuPvDiIoQKN57G5OwlI5KU2mldHatbz3FalzwslkgL7ZC87HXzP9tjEk78xvZAngZDZD",
     "validationToken": "my_token_is_personality",
-    "serverURL": "https://saveit12345.herokuapp.com/"
+    "serverURL": "https://saveit12345.herokuapp.com/ "
 }
