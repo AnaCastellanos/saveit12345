@@ -257,6 +257,7 @@ function receivedMessage(event) {
 
     if (messageText == 'hola' || messageText == 'hello' || messageText == 'hi' || messageText =='que onda' || messageText =='¿que onda?'){
       messageText = 'hola';
+      callUserData(messageData)
     }
 
     if (messageText == 'ahorrar' || messageText == 'ahorro' || messageText == 'necesito ahorrar' || messageText == 'quiero ahorrar' || messageText == 'abonar'){
