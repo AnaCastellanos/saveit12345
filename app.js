@@ -255,6 +255,10 @@ function receivedMessage(event) {
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText) {
+      case 'ayuda':
+        sendAyudaMessage(senderID);
+        break;
+
       case 'image':
         sendImageMessage(senderID);
         break;
@@ -619,6 +623,9 @@ function sendGenericMessage(recipientId) {
   callSendAPI(messageData);
 }
 
+
+
+/*CREA RECIBOS*/
 /*
  * Send a receipt message using the Send API.
  *
