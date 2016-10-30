@@ -932,7 +932,9 @@ function callUserData(messageData){
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {      
       FNU = body;
-      console.log(FNU);      
+      console.log(FNU);
+      console.log("HOLA");
+      console.log("");      
 
       if (messageId) {
         console.log("Successfully sent message with id %s to recipient %s", 
