@@ -1,6 +1,6 @@
 {
     "appSecret": "c383546d9687966776a7d552adc9b306",
-    "pageAccessToken": "EAACwNf0AJOkBAAMLIH9yo6YkxAOgJoZCKIn3agtadQTNgLVaiDVJF047KeIeYuLB5idmwF3Ov2MvmPONrdSnSKSZBvN6WZANW5ZAcV8lKgJK0TTx6DLbSIXz6RjhvVSE1Ml0Yp80q2RaIyB5neZAHUaoccI4anI1K4AdNBEFZBoAZDZD",
+    "pageAccessToken": "EAACwNf0AJOkBAIzXDiXBQUBZCLaklHTuKZAk5RuCTluzJyEI25icElGJ8Dcaj1PogwKZA7GltRQZCfS8unVlM3ZAbl0tc0hUCgblUEy62sAWgTmX9cY287b2nHPOdgKHCLDdoRyyMwvxxyjcgqFszQqLO601u7eKTPFhsPPg4XgZDZD",
     "validationToken": "my_token_is_personality",
     "serverURL": "https://saveit12345.herokuapp.com"
 }

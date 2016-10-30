@@ -334,51 +334,51 @@ function receivedMessage(event) {
 }
 
 
-console.log("")
-console.log("Introduce el articulo para el que te gustaria ahorrar");
-receivedArticulo(messagingEvent);
+// console.log("")
+// console.log("Introduce el articulo para el que te gustaria ahorrar");
+// receivedArticulo(messagingEvent);
 
 
 // Funcion para recivir el parametro a buscar en Mercado libre :D
-function receivedArticulo(event) {
-  var senderID = event.sender.id;
-  var recipientID = event.recipient.id;
-  var timeOfMessage = event.timestamp;
-  var message = event.message;
+// function receivedArticulo(event) {
+//   var senderID = event.sender.id;
+//   var recipientID = event.recipient.id;
+//   var timeOfMessage = event.timestamp;
+//   var message = event.message;
 
-  console.log("Received message for user %d and page %d at %d with message:", 
-    senderID, recipientID, timeOfMessage);
-  console.log(JSON.stringify(message));
+//   console.log("Received message for user %d and page %d at %d with message:", 
+//     senderID, recipientID, timeOfMessage);
+//   console.log(JSON.stringify(message));
 
-  var isEcho = message.is_echo;
-  var messageId = message.mid;
-  var appId = message.app_id;
-  var metadata = message.metadata;
+//   var isEcho = message.is_echo;
+//   var messageId = message.mid;
+//   var appId = message.app_id;
+//   var metadata = message.metadata;
 
-  // You may get a text or attachment but not both
-  var articulo = message.text;
-  console.log("Esto es lo que tengo de articulo" + articulo);
+//   // You may get a text or attachment but not both
+//   var articulo = message.text;
+//   console.log("Esto es lo que tengo de articulo" + articulo);
 
 
-  if (isEcho) {
-    // Just logging message echoes to console
-    console.log("Received echo for message %s and app %d with metadata %s", 
-      messageId, appId, metadata);
-    return;
-  } else if (quickReply) {
-    var quickReplyPayload = quickReply.payload;
-    console.log("Quick reply for message %s with payload %s",
-      messageId, quickReplyPayload);
-    sendTextMessage(senderID, "Quick reply tapped");
-    return;
-  }
-  if(articulo){
-    console.log("Voy a mandar a Mercado Libre");
-  }
-  else{
-    console.log("No tengo nada que mandar :(");
-  }
-}
+//   if (isEcho) {
+//     // Just logging message echoes to console
+//     console.log("Received echo for message %s and app %d with metadata %s", 
+//       messageId, appId, metadata);
+//     return;
+//   } else if (quickReply) {
+//     var quickReplyPayload = quickReply.payload;
+//     console.log("Quick reply for message %s with payload %s",
+//       messageId, quickReplyPayload);
+//     sendTextMessage(senderID, "Quick reply tapped");
+//     return;
+//   }
+//   if(articulo){
+//     console.log("Voy a mandar a Mercado Libre");
+//   }
+//   else{
+//     console.log("No tengo nada que mandar :(");
+//   }
+// }
 
 
 
