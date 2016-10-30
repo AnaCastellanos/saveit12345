@@ -266,7 +266,7 @@ function receivedMessage(event) {
     // the text we received.
     switch (messageText.toLowerCase()) {
       case 'hola':
-        sendAyudaMessage(senderID, "Hola {{fb_first_name}}! Me da gusto que me visites. Desde ahora yo sere tu asistente de fianzansas y te ayudare a ahorrar para eso que siempre haz querido. Si en algun momento no sabes que hacer, solo escribe 'ayuda' y yo con gusto te asistire para que tus ahorros nunca se detengan.");       
+        sendAyudaMessage(senderID, "Hola {{user_first_name}}! Me da gusto que me visites. Desde ahora yo sere tu asistente de fianzansas y te ayudare a ahorrar para eso que siempre haz querido. Si en algun momento no sabes que hacer, solo escribe 'ayuda' y yo con gusto te asistire para que tus ahorros nunca se detengan.");       
         break;
 
       case 'ayuda':
