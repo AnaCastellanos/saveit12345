@@ -252,16 +252,16 @@ function receivedMessage(event) {
   if (messageText) {
 
     if (messageText == 'hola' || messageText == 'hello' || messageText == 'hi' || messageText =='que onda' || messageText =='¿que onda?'){
-      console.log(true);
+      messageText = 'hola';
     }
 
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText.toLowerCase()) {
-      // case 'hola':
-      //   sendAyudaMessage(senderID, "Hola bienvenido a Save It\nNosotros te ayudaremos a ahorrar tu dinero");       
-      //   break;
+      case 'hola':
+        sendAyudaMessage(senderID, "Hola bienvenido a Save It\nNosotros te ayudaremos a ahorrar tu dinero");       
+        break;
 
       case 'ayuda':
         sendAyudaMessage(senderID, "Yepes");
