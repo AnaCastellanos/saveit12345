@@ -256,7 +256,7 @@ function receivedMessage(event) {
     // the text we received.
     switch (messageText.toLowerCase()) {
       case 'ayuda':
-        sendAyudaMessage(senderID);
+        sendAyudaMessage(senderID,messageText);
         break;
 
       case 'image':
@@ -407,6 +407,23 @@ function receivedAccountLink(event) {
   console.log("Received account link event with for user %d with status %s " +
     "and auth code %s ", senderID, status, authCode);
 }
+
+
+function sendAyudaMessage(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      text: messageText,
+      metadata: "Yepes :D"
+    }
+  };
+  callSendAPI(messageData);
+}
+
+
+
 
 /*
  * Send an image using the Send API.
