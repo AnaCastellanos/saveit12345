@@ -267,8 +267,15 @@ function receivedMessage(event) {
     switch (messageText.toLowerCase()) {
       case 'hola':
         sendAyudaMessage(senderID, "Hola " + FNU + "!. Me da gusto que me visites. Desde ahora yo sere tu asistente de fianzansas y te ayudare a ahorrar para eso que siempre haz querido. Si en algun momento no sabes que hacer, solo escribe 'ayuda' y yo con gusto te asistire para que tus ahorros nunca se detengan."); 
-        sendAyudaMessage(senderID, "Quieres comenzar a ahorrar?"); 
-        sendQuickReply(senderID);     
+        
+        sendQuickReply(senderID);
+
+        if (quickReply == 'Si'){
+          console.log("Hola SI SE PUDO");
+        }else{
+          console.log("Hola NO SE PUDO");
+        }
+
         break;
 
       case 'ayuda':
@@ -793,17 +800,17 @@ function sendQuickReply(recipientId) {
       id: recipientId
     },
     message: {
-      text: "¿Quieres abonar dinero a tu cuenta de ahorros?",
+      text: "¿Quieres comenzara a ahorrar?",
       quick_replies: [
         {
           "content_type":"text",
           "title":"Si",
-          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_ACTION"
+          "payload":"Si"
         },
         {
           "content_type":"text",
           "title":"No",
-          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_COMEDY"
+          "payload":"No"
         },
       ]
     }
