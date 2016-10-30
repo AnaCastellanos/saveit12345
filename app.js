@@ -251,11 +251,14 @@ function receivedMessage(event) {
 
   if (messageText) {
 
+    if (messageText == 'hola' || 'hello' || 'hi' || 'que onda' || '¿que onda?')
+      messageText = 'hola';
+
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText.toLowerCase()) {
-      case ('hola' && 'hello' && 'hi' && 'que onda' && '¿que onda?'):
+      case 'hola':
         sendAyudaMessage(senderID, "Hola bienvenido a Save It");
         break;
 
