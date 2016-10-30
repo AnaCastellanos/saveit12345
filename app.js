@@ -270,7 +270,7 @@ function receivedMessage(event) {
         
         sendQuickReply(senderID);
 
-        if (quickReply == 'Si'){
+        if (quickReply.payload == 'Si'){
           console.log("Hola SI SE PUDO");
         }else{
           console.log("Hola NO SE PUDO");
