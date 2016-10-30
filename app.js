@@ -223,13 +223,6 @@ function receivedMessage(event) {
   var timeOfMessage = event.timestamp;
   var message = event.message;
 
-  console.log("SOY EL EVENTO");
-  console.log(event);
-  console.log("");
-
-  console.log("Received message for user %d and page %d at %d with message:", 
-    senderID, recipientID, timeOfMessage);
-  console.log(JSON.stringify(message));
 
   var isEcho = message.is_echo;
   var messageId = message.mid;
@@ -439,9 +432,6 @@ function receivedPostback(event) {
   // button for Structured Messages. 
   var payload = event.postback.payload;
 
-  console.log("Received postback for user %d and page %d with payload '%s' " + 
-    "at %d", senderID, recipientID, payload, timeOfPostback);
-
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
   sendTextMessage(senderID, "Postback called");
@@ -461,9 +451,6 @@ function receivedMessageRead(event) {
   // All messages before watermark (a timestamp) or sequence have been seen.
   var watermark = event.read.watermark;
   var sequenceNumber = event.read.seq;
-
-  console.log("Received message read event for watermark %d and sequence " +
-    "number %d", watermark, sequenceNumber);
 }
 
 /*
@@ -477,6 +464,11 @@ function receivedMessageRead(event) {
 function receivedAccountLink(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
+  console.log("Event");
+  console.log(event);
+  console.log("");
+
+
 
   var status = event.account_linking.status;
   var authCode = event.account_linking.authorization_code;
