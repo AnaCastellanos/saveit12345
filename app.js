@@ -245,7 +245,8 @@ function receivedMessage(event) {
       messageId, quickReplyPayload);
 
     console.log("\nHola\n");
-    console.log(quickReply.payload);
+    console.log(quickReply);
+    console.log("\n\n\n");
     sendTextMessage(senderID, "Quick reply tapped");
     return;
   }
@@ -265,32 +266,34 @@ function receivedMessage(event) {
     // the text we received.
     switch (messageText.toLowerCase()) {
       case 'hola':
-        sendAyudaMessage(senderID, "Hola " + FNU + "!. Me da gusto que me visites. Desde ahora yo sere tu asistente de fianzansas y te ayudare a ahorrar para eso que siempre haz querido. Si en algun momento no sabes que hacer, solo escribe 'ayuda' y yo con gusto te asistire para que tus ahorros nunca se detengan.");       
+        sendAyudaMessage(senderID, "Hola " + FNU + "!. Me da gusto que me visites. Desde ahora yo sere tu asistente de fianzansas y te ayudare a ahorrar para eso que siempre haz querido. Si en algun momento no sabes que hacer, solo escribe 'ayuda' y yo con gusto te asistire para que tus ahorros nunca se detengan."); 
+        sendAyudaMessage(senderID, "Quieres comenzar a ahorrar?"); 
+        sendQuickReply(senderID);     
         break;
 
       case 'ayuda':
         sendAyudaMessage(senderID, "Ya vine a tu rescate.\n*Si quieres ahorrar dinero basta con escribir\n'Ahorrar'\n*Si quieres retirar tu dinero ahorado basta con escribir 'retirar'\n*Si quieres saber cuanto dinero tienes ahorrado basta con escribir 'ahorrado'.");
         break;
 
-      case 'image':
-        sendImageMessage(senderID);
-        break;
+      // case 'image':
+      //   sendImageMessage(senderID);
+      //   break;
 
-      case 'gif':
-        sendGifMessage(senderID);
-        break;
+      // case 'gif':
+      //   sendGifMessage(senderID);
+      //   break;
 
-      case 'audio':
-        sendAudioMessage(senderID);
-        break;
+      // case 'audio':
+      //   sendAudioMessage(senderID);
+      //   break;
 
-      case 'video':
-        sendVideoMessage(senderID);
-        break;
+      // case 'video':
+      //   sendVideoMessage(senderID);
+      //   break;
 
-      case 'file':
-        sendFileMessage(senderID);
-        break;
+      // case 'file':
+      //   sendFileMessage(senderID);
+      //   break;
 
       case 'button':
         sendButtonMessage(senderID);
@@ -304,7 +307,7 @@ function receivedMessage(event) {
         sendReceiptMessage(senderID);
         break;
 
-      case 'ahorrar':
+      case 'QuickReply':
         sendQuickReply(senderID);
         break;        
 
