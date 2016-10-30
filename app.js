@@ -242,7 +242,7 @@ function receivedMessage(event) {
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload;
     if (quickReplyPayload == "Si"){
-      messageText("GENIAL!! Te ire guiando en una serie de pasos para comenzar con tus ahorros.");      
+      sendTextMessage(senderID, "GENIAL!! Te ire guiando en una serie de pasos para comenzar con tus ahorros.");      
     }else{
       
     }
