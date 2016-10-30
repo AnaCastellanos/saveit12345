@@ -255,8 +255,12 @@ function receivedMessage(event) {
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText.toLowerCase()) {
+      case 'hola' || 'hello' || 'hi' || 'que onda' || '¿que onda?' || '':
+        sendAyudaMessage(senderID, "Hola bienvenido a Save It");
+        break;
+
       case 'ayuda':
-        sendAyudaMessage(senderID, "Hola como estas?");
+        sendAyudaMessage(senderID, "");
         break;
 
       case 'image':
