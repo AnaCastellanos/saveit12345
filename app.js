@@ -241,13 +241,11 @@ function receivedMessage(event) {
     return;
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload;
-    console.log("Quick reply for message %s with payload %s",
-      messageId, quickReplyPayload);
-
-    console.log("\nHola\n");
-    console.log(quickReply);
-    console.log("\n\n\n");
-    sendTextMessage(senderID, "Quick reply tapped");
+    if (quickReplyPayload == "Si"){
+      console.log("Hola SI SE PUDO");
+    }else{
+      console.log("Hola NO SE PUDO");
+    }
     return;
   }
 
@@ -269,16 +267,6 @@ function receivedMessage(event) {
         sendAyudaMessage(senderID, "Hola " + FNU + "!. Me da gusto que me visites. Desde ahora yo sere tu asistente de fianzansas y te ayudare a ahorrar para eso que siempre haz querido. Si en algun momento no sabes que hacer, solo escribe 'ayuda' y yo con gusto te asistire para que tus ahorros nunca se detengan."); 
         
         sendQuickReply(senderID);
-
-        if (quickReply){
-          var quickReplyPayload = quickReply.payload;
-          if (quickReplyPayload == "Si"){
-            console.log("Hola SI SE PUDO");
-          }else{
-            console.log("Hola NO SE PUDO");
-          }
-        }
-
 
         break;
 
