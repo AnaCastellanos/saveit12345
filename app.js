@@ -260,6 +260,7 @@ function receivedMessage(event) {
     switch (messageText.toLowerCase()) {
       case 'hola':
         sendAyudaMessage(senderID, "Hola bienvenido a Save It");
+        sendAyudaMessage(senderID, "Nosotros te ayudaremos a ahorrar tu dinero");
         break;
 
       case 'ayuda':
