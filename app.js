@@ -223,6 +223,10 @@ function receivedMessage(event) {
   var timeOfMessage = event.timestamp;
   var message = event.message;
 
+  console.log("SOY EL EVENTO");
+  console.log(event);
+  console.log("");
+
   console.log("Received message for user %d and page %d at %d with message:", 
     senderID, recipientID, timeOfMessage);
   console.log(JSON.stringify(message));
@@ -257,7 +261,7 @@ function receivedMessage(event) {
 
     if (messageText == 'hola' || messageText == 'hello' || messageText == 'hi' || messageText =='que onda' || messageText =='¿que onda?'){
       messageText = 'hola';
-      callUserData(messageData)
+      callUserData(userData)
     }
 
     if (messageText == 'ahorrar' || messageText == 'ahorro' || messageText == 'necesito ahorrar' || messageText == 'quiero ahorrar' || messageText == 'abonar'){
@@ -925,7 +929,7 @@ function callSendAPI(messageData) {
   });  
 }
 
-function callUserData(messageData){
+function callUserData(userData){
   request({
     uri: 'https://graph.facebook.com/v2.6/me/thread_settings',
     qs: { access_token: PAGE_ACCESS_TOKEN },
