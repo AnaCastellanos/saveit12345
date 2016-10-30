@@ -421,7 +421,7 @@ function sendImageMessage(recipientId) {
       attachment: {
         type: "image",
         payload: {
-          url: SERVER_URL + "assets/rift.png"
+          url: "https://saveit12345.herokuapp.com/assets/rift.png"
         }
       }
     }
